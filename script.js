@@ -13,6 +13,7 @@ const weatherIconElement = document.querySelector('#weather-icon')
 const countryElement = document.querySelector('#country')
 const humidityElement = document.querySelector('#humidity span')
 const windElement = document.querySelector('#wind span')
+const extra = document.querySelector('div #extra')
 
 const weatherContainer = document.querySelector('#wheather-data')
 
@@ -21,7 +22,7 @@ const weatherContainer = document.querySelector('#wheather-data')
 const getWheatherData = async(city)=>{
     const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`
 
-    const res = await fetch(apiWeatherURL)
+    const res = await fetch(apiWeatherURL)//fetch devolve a pormessa
     const data = await res.json()
 
     return data
@@ -32,7 +33,7 @@ const showWheatherData = async(city)=>{
     const data = await getWheatherData(city)
 
     cityElement.innerHTML = data.name
-    tempElement.innerHTML = parseInt(data.main.temp)
+    tempElement.innerHTML = parseInt(data.main.temp) //tranforma em numero
     descElement.innerHTML = data.weather[0].description
     weatherIconElement.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
 
@@ -44,6 +45,11 @@ const showWheatherData = async(city)=>{
     weatherContainer.classList.remove('hide')
 
 
+}
+
+function fun(arg){
+    extra.classList.add('hide')
+    showWheatherData(arg)
 }
 
 //eventos
