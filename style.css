@@ -112,7 +112,7 @@ body{
 /*extra*/
 
 #extra{
-    display: flex;
+    display:flex;
     padding-top: 2em;
     align-items: center;
     justify-content: center;
@@ -139,6 +139,7 @@ body{
 #city1 div:hover , #city2 div:hover{
 
     border: 2px solid #5c54edbe;
+    
    
    
 

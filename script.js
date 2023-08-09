@@ -13,7 +13,8 @@ const weatherIconElement = document.querySelector('#weather-icon')
 const countryElement = document.querySelector('#country')
 const humidityElement = document.querySelector('#humidity span')
 const windElement = document.querySelector('#wind span')
-const extra = document.querySelector('div #extra')
+const extra = document.querySelector('div #city2')
+const extra2= document.querySelector('div #city1')
 
 const weatherContainer = document.querySelector('#wheather-data')
 
@@ -49,6 +50,7 @@ const showWheatherData = async(city)=>{
 
 function fun(arg){
     extra.classList.add('hide')
+    extra2.classList.add('hide')
     showWheatherData(arg)
 }
 
