@@ -45,6 +45,7 @@ body{
     border-radius: 4px;
 }
 
+
 .form button{
     padding: .8rem;
     min-width: 50px;
@@ -54,6 +55,11 @@ body{
     cursor: pointer;
     border: none;
     border-radius: 4px;
+}
+.form button:hover{
+    background-image: linear-gradient(to right, rgba(8, 8, 8, 0.555), rgba(0, 255, 255, 0.336));
+    color: #dafffd;
+    transition: 1s;
 }
 
 /*clima*/
@@ -133,15 +139,20 @@ body{
     border-radius: 10px;
     color: #3e3d47;
     font-weight: bolder;
+    
+    
+  
+}
+#city1 div:hover , #city2 div:hover{
+    background-image: linear-gradient(to right, rgba(138, 9, 177, 0.829), rgba(91, 179, 185, 0.712));
+    border:1px solid #20942669;
+    color: #dafffd;
+    transition: 1s;
   
 }
 
-#city1 div:hover , #city2 div:hover{
 
-    border: 2px solid #5c54edbe;
-    
-   
-   
 
-}
+
+  
 
